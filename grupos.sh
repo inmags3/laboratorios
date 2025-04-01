@@ -8,18 +8,20 @@ valid_genres=("rock" "jazz" "metal" "alternative & punk" "rock and roll" "blues"
 is_valid_genre() {
 	local genre_to_check="$1"
 	for valid in "${valid_genres[@]}"; do
-		if [[ "$genre_to_check" == "$valid"]]; then
+		if [[ "$genre_to_check" == "$valid" ]]; then
 			return 0
 		fi
 	done
+return 1
+}
 
 # Leemos línea por línea del archivo data.txt
 
 while IFS=',' read -r title album genre; do
-	#Eliminamos espacios al principio y final
-	title=$(echo "$title" | sed 's/^ *//;s/ *$//')
-	album=$(echo "$album" | sed 's/^ *//;s/ *$//')
-	genre=$(echo "$genre" | sed 's/^ *//;s/ *$//')
+#Eliminamos espacios al principio y final
+title=$(echo "$title" | sed 's/^ *//;s/ *$//')
+album=$(echo "$album" | sed 's/^ *//;s/ *$//')
+genre=$(echo "$genre" | sed 's/^ *//;s/ *$//')
 
 # Convertir "," por "|"
 
@@ -30,13 +32,15 @@ line="$title|$album|$genre"
 filename="$genre"
 
 # Comprobamos si el género es válido
-	if is_valid_genre"; then
+if is_valid_genre "$genre"; then
 
+	# Guardar la línea en el fichero correspondiente
 
-# Guardar la línea en el fichero correspondiente
+	echo "$line" >> "$filename.txt"
+fi
 
-echo "$line" >> "$filename.txt"
 done < data.txt
 
 echo "Archivos generados:"
 ls *.txt grupos.sh
+#token personal almacenado en token.txt
