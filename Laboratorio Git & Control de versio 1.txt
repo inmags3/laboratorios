@@ -16,4 +16,4 @@ ineficiente, revisad en remoto que la rama nueva exista, solo quiero eso)
 5-Mergear la nueva rama a main y sincronizar con el repositorio remoto (comprobad que los cambios han subido)
 
 *Ejercicio bonus. Guardar un token personal en este mismo fichero e intentar mergearlo en local y despues intentar syncronizarlo en github.
-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PARAEJEMPLO
+ghp_9ozisOkWhgw0 + qhV5XaCuynvrw + C81NF371FwK (reconstruir al usar)
