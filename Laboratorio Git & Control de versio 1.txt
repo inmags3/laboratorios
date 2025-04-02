@@ -18,4 +18,5 @@ ineficiente, revisad en remoto que la rama nueva exista, solo quiero eso)
 *Ejercicio bonus. Guardar un token personal en este mismo fichero e intentar mergearlo en local y despues intentar syncronizarlo en github.
 ghp_9ozisOkWhgw0 +
  qhV5XaCuynvrw +
- C81NF371FwK (reconstruir al usar)
+ C81NF371FwK
+ (reconstruir al usar)
